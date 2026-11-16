@@ -1,0 +1,53 @@
+name: Bug report
+description: Something does not work the way it should.
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Security problems do not belong here. Use **Report a vulnerability** on the repository's Security tab instead.
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened
+      description: Describe what you saw, including any error message exactly as shown.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+      description: Describe what should have happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the smallest set of steps that shows the problem, starting from a fresh launch or a fresh clone.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The release, build number or commit you used.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Device and system
+      description: For example the device model and operating system version, or the browser and its version.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs and screenshots
+      description: Paste logs or attach screenshots. Remove personal data, tokens and anything else private first.
+      render: text

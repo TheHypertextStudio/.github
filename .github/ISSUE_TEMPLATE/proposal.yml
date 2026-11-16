@@ -1,0 +1,36 @@
+name: Proposal
+description: Suggest a new capability or a change to how something works.
+labels: ['enhancement']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Open a proposal before starting a large pull request, so the direction is agreed first.
+  - type: textarea
+    id: need
+    attributes:
+      label: What you are trying to do
+      description: Describe the situation and what gets in the way today. Start from the need, not the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you propose
+      description: Describe how it would work for the person using it.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+      description: Other approaches, workarounds you use now, or similar behavior elsewhere.
+  - type: dropdown
+    id: contribution
+    attributes:
+      label: Would you like to build it?
+      options:
+        - 'Yes, with guidance on the approach'
+        - 'No, I am only proposing it'
+    validations:
+      required: true
