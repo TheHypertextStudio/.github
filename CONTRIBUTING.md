@@ -13,11 +13,11 @@ You never need a Studio account, a Studio email address or access to Studio infr
 
 ## How your pull request is checked
 
-The repository's protected checks run on your pull request. They are the same checks a maintainer's change must pass: the tests, formatting, commit messages and documentation links. The first time you contribute, a maintainer approves the check run before it starts, because the checks run your code on Studio machines.
+Studio machines never run a pull request from a fork directly, so the checks don't start on your pull request itself. A maintainer reads your change first, then pushes your commits, with your authorship, to a branch in the repository, where the repository's protected checks run. They are the same checks a maintainer's change must pass: the tests, formatting, commit messages and documentation links.
 
-The repository's Git hooks are for maintainers; leave them uninstalled. The checks on your pull request are what decide.
+The repository's Git hooks are for maintainers; leave them uninstalled. The checks on your change are what decide.
 
-When a check fails, its log names the problem and the fix. You can push more commits to the same branch until the checks pass. A maintainer may also apply formatting or reword a commit message while rebasing your branch, and keeps your authorship when doing so.
+When a check fails, its log names the problem and the fix. You can push more commits to your branch, and the maintainer runs the checks on them again. A maintainer may also apply formatting or reword a commit message while rebasing your branch, and keeps your authorship when doing so.
 
 ## Commit messages
 
@@ -37,7 +37,7 @@ Some work needs Studio credentials or carries responsibility for people who use 
 - releasing, signing and publishing builds, and deploying services,
 - reading or changing Studio infrastructure, staging and production data, and credentials,
 - triaging private vulnerability reports and publishing advisories,
-- approving check runs for first-time contributors.
+- running the checks on a contributor's change.
 
 If your change needs one of these steps, say so in the pull request. The maintainer completes it after review.
 
